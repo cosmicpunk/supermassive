@@ -1,0 +1,12 @@
+syntax = "proto3";
+package cosmicpunk.supermassive.supermassive;
+
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/cosmicpunk/supermassive/x/supermassive/types";
+
+// GenesisState defines the capability module's genesis state.
+message GenesisState {
+    // this line is used by starport scaffolding # genesis/proto/state
+}
+
