@@ -10,6 +10,12 @@ starport serve
 
 `serve` command installs dependencies, builds, initializes and starts your blockchain in development.
 
+## Upload contracts
+
+```
+supermassived tx wasm store antimatter.wasm --from alice --gas 1500000
+```
+
 ## Configure
 
 Your blockchain in development can be configured with `config.yml`. To learn more see the [reference](https://github.com/tendermint/starport#documentation).
