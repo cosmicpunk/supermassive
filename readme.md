@@ -25,6 +25,7 @@ supermassived q wasm list-code
 ## Instantiate contracts
 
 ```sh
+supermassived tx wasm instantiate 1 '{ "name":"supermassive" }' --from alice --label marketplace --gas 1000000
 supermassived tx wasm instantiate 2 '{ "name":"alien", "symbol":"ALIEN", "minter":"cosmos135gzs30un5wg32fyaddlyjgehf4ege850pctq8" }' --from alice --label alien --gas 1000000
 ```
 
