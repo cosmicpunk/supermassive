@@ -4,7 +4,7 @@
 
 ## Get started
 
-```
+```sh
 starport serve
 ```
 
@@ -12,19 +12,19 @@ starport serve
 
 ## Upload contracts
 
-```
+```sh
 supermassived tx wasm store antimatter.wasm --from alice --gas 1500000
 supermassived tx wasm store cw721_base.wasm --from alice --gas 1500000
 ```
 
 View them:
-```
+```sh
 supermassived q wasm list-code
 ```
 
 ## Instantiate contracts
 
-```
+```sh
 supermassived tx wasm instantiate 2 '{ "name":"alien", "symbol":"ALIEN", "minter":"cosmos135gzs30un5wg32fyaddlyjgehf4ege850pctq8" }' --from alice --label alien --gas 1000000
 ```
 
