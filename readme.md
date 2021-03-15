@@ -29,6 +29,19 @@ supermassived tx wasm instantiate 1 '{ "name":"supermassive" }' --from alice --l
 supermassived tx wasm instantiate 2 '{ "name":"alien", "symbol":"ALIEN", "minter":"cosmos135gzs30un5wg32fyaddlyjgehf4ege850pctq8" }' --from alice --label alien --gas 1000000
 ```
 
+## Perform Actions
+
+Mint NFT:
+```sh
+supermassived tx wasm execute cosmos1qxxlalvsdjd07p07y3rc5fu6ll8k4tmecu7e9y '{
+  "mint": {
+    "name": "Alien 1",
+    "owner": "cosmos135gzs30un5wg32fyaddlyjgehf4ege850pctq8",
+    "token_id": "1"
+  }
+}'  -y --from alice --gas 1000000
+```
+
 ## Configure
 
 Your blockchain in development can be configured with `config.yml`. To learn more see the [reference](https://github.com/tendermint/starport#documentation).
