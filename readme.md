@@ -42,6 +42,21 @@ supermassived tx wasm execute cosmos1qxxlalvsdjd07p07y3rc5fu6ll8k4tmecu7e9y '{
 }'  -y --from alice --gas 1000000
 ```
 
+List NFT in marketplace:
+```sh
+supermassived tx wasm execute cosmos1qxxlalvsdjd07p07y3rc5fu6ll8k4tmecu7e9y '{
+  "send_nft": {
+    "contract": "cosmos1hqrdl6wstt8qzshwc6mrumpjk9338k0lr4dqxd",
+    "token_id": "1",
+    "msg": "eyAibGlzdF9wcmljZSI6IHsgImFtb3VudCI6ICIxMDAwMDAiLCAiZGVub20iOiAic3Rha2UiIH19"
+  }
+}' -y --from alice --gas 1000000
+```
+This calls `send_nft` in the cw721 contract which passes along a BASE64 encoded msg to the marketplace contract.
+The encoded msg is: `{ "list_price": { "amount": "100000", "denom": "stake" }}`. The marketplace contract receives
+the message and offers it up for sale at the list price.
+
+
 ## Configure
 
 Your blockchain in development can be configured with `config.yml`. To learn more see the [reference](https://github.com/tendermint/starport#documentation).
